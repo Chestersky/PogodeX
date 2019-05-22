@@ -22,8 +22,8 @@ export class AuthService {
     return of(this.firebaseAuth.auth.signInAnonymously());
   }
 
-  signInWithGoogle(): Observable<any> {
-    return of(this.firebaseAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()));
+  signInWithFacebook(): Observable<any> {
+    return of(this.firebaseAuth.auth.signInWithPopup(new auth.FacebookAuthProvider()));
   }
 
   signOut(): Observable<any> {

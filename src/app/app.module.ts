@@ -18,6 +18,7 @@ import { firebase } from '../config/firebase';
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    // Firebase -> Settings -> General -> Your apps -> Web apps -> Config
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule,
     AppRoutingModule

@@ -7,8 +7,10 @@
 </ion-header>
 
 <ion-content>
+  <!-- Temporary -->
   {{ user$ | async | json }}
   <ion-button (click)="signIn()">Sign In</ion-button>
+  <ion-button (click)="signInWithFacebook()">Sign In Facebook</ion-button>
   <ion-button (click)="signUp()">Sign Up</ion-button>
   <ion-button (click)="signOut()">Sign Out</ion-button>
 </ion-content>
