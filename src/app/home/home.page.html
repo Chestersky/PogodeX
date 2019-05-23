@@ -1,11 +1,35 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="ion-padding"></div>
+  <ion-card-header>
+    <ion-item>
+      <ion-thumbnail id="img">
+        <ion-img
+          [src]="'https://img.icons8.com/color/52/000000/sun.png'"
+        ></ion-img>
+      </ion-thumbnail>
+      <ion-label id="weather_info"
+        ><ion-card-title id="degrees"><strong>24°</strong></ion-card-title>
+        <ion-card-subtitle id="description"> bezchmurnie</ion-card-subtitle>
+      </ion-label>
+      <ion-button fill="clear" color="dark"
+        ><ion-icon slot="icon-only" name="menu"></ion-icon
+      ></ion-button>
+    </ion-item>
+  </ion-card-header>
+  <ion-img
+    [src]="'https://images.mummypages.ie/images/2181/109/5/9_5/bart+resize.jpg'"
+  ></ion-img>
 </ion-content>
+<ion-tabs>
+  <!-- Tab bar -->
+  <ion-tab-bar>
+    <ion-tab-button>
+      <ion-title>Dzisiaj</ion-title>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-title>Jutro</ion-title>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-title>Pojutrze</ion-title>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
