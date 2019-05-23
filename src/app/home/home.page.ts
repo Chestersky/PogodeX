@@ -5,6 +5,7 @@ import { WeatherService } from '../weather/weather.service';
 import { DateTime } from 'luxon';
 import { WeatherEntry } from '../models';
 import { WeatherDate } from '../models/weather-date';
+import { GeolocationService } from '../geolocation/geolocation.service';
 
 @Component({
   selector: 'app-home',
@@ -14,9 +15,16 @@ import { WeatherDate } from '../models/weather-date';
 export class HomePage {
   user$: Observable<firebase.User>;
   weather$: Observable<WeatherEntry[]>;
+  coordinates$: Observable<any>;
+  position: any;
   credentials: any = { email: 'mail@example.com', password: 'admin123#' };
-  constructor(private auth: AuthService, private weatherService: WeatherService) {
+  constructor(
+    private auth: AuthService,
+    private weatherService: WeatherService,
+    private geolocation: GeolocationService
+  ) {
     this.user$ = this.auth.user;
+    this.coordinates$ = this.geolocation.getCurrentPosition$();
   }
 
   // Temporary \/
