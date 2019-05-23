@@ -7,9 +7,10 @@
 </ion-header>
 
 <ion-content>
+  <div>Coordinates: {{ coordinates$ | async | json }}</div>
   <div>
     <!-- Temporary -->
-    {{ user$ | async | json }}
+    Auth: {{ user$ | async | json }}
     <ion-button (click)="signIn()">Sign In</ion-button>
     <ion-button (click)="signInWithFacebook()">Sign In Facebook</ion-button>
     <ion-button (click)="signUp()">Sign Up</ion-button>
@@ -20,7 +21,6 @@
     <ion-button (click)="getWeather(1)">Jutro</ion-button>
     <ion-button (click)="getWeather(2)">Pojutrze</ion-button>
     <hr />
-    {{ weather$ | async | json }}
+    Weather: {{ weather$ | async | json }}
   </div>
-  <div>{{ coordinates$ | async | json }}</div>
 </ion-content>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Geolocation, Geoposition, GeolocationOptions } from '@ionic-native/geolocation';
-import { Observable, from, EMPTY } from 'rxjs';
+import { Observable, from, EMPTY, of } from 'rxjs';
 import { map, take, catchError } from 'rxjs/operators';
 import { Coordinates } from '../models';
 
@@ -30,7 +30,7 @@ export class GeolocationService {
       map(this.mapPositionToCoords),
       catchError(error => {
         console.error(error.message);
-        return EMPTY;
+        return of(null);
       })
     );
   }
