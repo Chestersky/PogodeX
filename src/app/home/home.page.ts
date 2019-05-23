@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 import { Observable } from 'rxjs';
-import { ModalController } from '@ionic/angular';
+import { WeatherService } from '../weather/weather.service';
+import { DateTime } from 'luxon';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,9 @@ import { ModalController } from '@ionic/angular';
 export class HomePage {
   user$: Observable<firebase.User>;
   credentials: any = { email: 'mail@example.com', password: 'admin123#' };
-  constructor(private auth: AuthService, private modalCtrl: ModalController) {
+  constructor(private auth: AuthService, private weather: WeatherService) {
     this.user$ = this.auth.user;
+    this.getWeather();
   }
 
   // Temporary \/
@@ -30,5 +32,11 @@ export class HomePage {
 
   signOut() {
     this.auth.signOut().subscribe();
+  }
+
+  getWeather() {
+    this.weather
+      .getWeather$('Krakow', DateTime.local().plus({ day: 1 }))
+      .subscribe(weather => console.log(weather), error => console.log({ error }));
   }
 }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -21,6 +22,7 @@ import { firebase } from '../config/firebase';
     // Firebase -> Settings -> General -> Your apps -> Web apps -> Config
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [

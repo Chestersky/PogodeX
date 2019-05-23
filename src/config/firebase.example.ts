@@ -1,4 +1,4 @@
-// Change name to firebase.ts and fill gaps
+// Create new file as firebase.ts and fill gaps
 export const firebase = {
   apiKey: '<your-key>',
   authDomain: '<your-project-authdomain>',
