@@ -3,9 +3,10 @@ import { AuthService } from '../auth/auth.service';
 import { Observable } from 'rxjs';
 import { WeatherService } from '../weather/weather.service';
 import { DateTime } from 'luxon';
-import { WeatherEntry } from '../models';
+import { Weather } from '../models';
 import { WeatherDate } from '../models/weather-date';
 import { GeolocationService } from '../geolocation/geolocation.service';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ import { GeolocationService } from '../geolocation/geolocation.service';
 })
 export class HomePage {
   user$: Observable<firebase.User>;
-  weather$: Observable<WeatherEntry[]>;
+  weather$: Observable<Weather>;
   coordinates$: Observable<any>;
   position: any;
   credentials: any = { email: 'mail@example.com', password: 'admin123#' };
@@ -45,9 +46,10 @@ export class HomePage {
   }
 
   getWeather(dateOffset: WeatherDate) {
-    this.weather$ = this.weatherService.getWeather$(
-      'Krakow',
-      DateTime.local().plus({ day: dateOffset })
+    this.weather$ = this.coordinates$.pipe(
+      switchMap(coords =>
+        this.weatherService.getWeather$(coords, DateTime.local().plus({ day: dateOffset }))
+      )
     );
   }
 }
