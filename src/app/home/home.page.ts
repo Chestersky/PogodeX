@@ -3,6 +3,8 @@ import { AuthService } from '../auth/auth.service';
 import { Observable } from 'rxjs';
 import { WeatherService } from '../weather/weather.service';
 import { DateTime } from 'luxon';
+import { WeatherEntry } from '../models';
+import { WeatherDate } from '../models/weather-date';
 
 @Component({
   selector: 'app-home',
@@ -11,10 +13,10 @@ import { DateTime } from 'luxon';
 })
 export class HomePage {
   user$: Observable<firebase.User>;
+  weather$: Observable<WeatherEntry[]>;
   credentials: any = { email: 'mail@example.com', password: 'admin123#' };
-  constructor(private auth: AuthService, private weather: WeatherService) {
+  constructor(private auth: AuthService, private weatherService: WeatherService) {
     this.user$ = this.auth.user;
-    this.getWeather();
   }
 
   // Temporary \/
@@ -34,9 +36,10 @@ export class HomePage {
     this.auth.signOut().subscribe();
   }
 
-  getWeather() {
-    this.weather
-      .getWeather$('Krakow', DateTime.local().plus({ day: 1 }))
-      .subscribe(weather => console.log(weather), error => console.log({ error }));
+  getWeather(dateOffset: WeatherDate) {
+    this.weather$ = this.weatherService.getWeather$(
+      'Krakow',
+      DateTime.local().plus({ day: dateOffset })
+    );
   }
 }

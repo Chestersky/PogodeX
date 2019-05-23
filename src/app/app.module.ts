@@ -11,7 +11,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { firebase } from '../config/firebase';
+import { firebase } from '../config';
 
 @NgModule({
   declarations: [AppComponent],
