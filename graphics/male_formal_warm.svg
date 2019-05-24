@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#4E565A}
+    .fil4 {fill:#7688A1}
+    .fil3 {fill:#A2D9F7}
+    .fil2 {fill:#FCD5A6}
+    .fil1 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="10588.4" y1="13938.1" x2="10588.4" y2="19055.5">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0" points="14001,10351 7205,10330 6693,7644 7385,7470 7573,6338 11786,4620 11522,5849 15147,5250 14062,7178 16181,6791 "/>
+  <polygon class="fil1" points="8541,13938 12635,13938 12635,19055 8541,19055 "/>
+  <rect class="fil2" x="7481" y="7127" width="6376" height="9662" rx="2770" ry="2680"/>
+  <path class="fil3" d="M18149 22102l0 4388 0 3148 -2595 0 -10223 0 -2595 0 0 -3148 0 -4388c0,-1732 1168,-3148 2595,-3148l10223 0c1427,0 2595,1417 2595,3148z"/>
+  <polygon class="fil4" points="10087,20321 8150,19031 8666,18233 10627,19031 "/>
+  <polygon class="fil3" points="10048,20243 8112,18954 8627,18155 10588,18954 "/>
+  <polygon class="fil4" points="11167,20321 13104,19031 12588,18233 10627,19031 "/>
+  <polygon class="fil3" points="11206,20243 13143,18954 12627,18155 10666,18954 "/>
+ </g>
+</svg>

@@ -24,7 +24,7 @@
     Weather: {{ weather$ | async | json }}
   </div>
   <div>
-    <ion-button *ngIf="user$ | async" (click)="addUserPref()">Add user</ion-button>
+    <ion-button *ngIf="user$ | async" (click)="setUserPref()">Add user</ion-button>
     UserPref: {{ userPref$ | async | json }}
     <ion-button (click)="changeGender(0)">Male</ion-button>
     <ion-button (click)="changeGender(1)">Female</ion-button>

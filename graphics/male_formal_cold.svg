@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#4E565A}
+    .fil5 {fill:#CC6F3C}
+    .fil3 {fill:#DCCF73}
+    .fil4 {fill:#FCD5A6}
+    .fil2 {fill:#FFFBDB}
+    .fil6 {fill:#A75F4A;fill-rule:nonzero}
+    .fil1 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="10442.9" y1="13873.5" x2="10442.9" y2="19016.8">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <polygon class="fil0" points="13844,10352 7013,10331 6499,7631 7194,7456 7384,6320 11618,4592 11353,5828 14996,5226 13905,7164 16035,6774 "/>
+  <polygon class="fil1" points="8386,13874 12500,13874 12500,19017 8386,19017 "/>
+  <polygon class="fil2" points="10443,26964 5139,18900 15413,18900 "/>
+  <polygon class="fil3" points="9918,20274 7972,18977 8490,18175 10461,18977 "/>
+  <polygon class="fil3" points="11004,20274 12950,18977 12432,18175 10461,18977 "/>
+  <rect class="fil4" x="7239" y="7023" width="6408" height="9710" rx="2784" ry="2693"/>
+  <path class="fil5" d="M10482 29639l0 -3344c-1364,-2157 -2424,-5513 -2304,-7395l-2833 0c-1749,211 -2538,1343 -2608,3164l0 7575 7745 0z"/>
+  <path class="fil5" d="M10404 29639l0 -3344c1364,-2157 2424,-5513 2304,-7395l2833 0c1749,211 2538,1343 2608,3164l0 7575 -7745 0z"/>
+  <polygon class="fil6" points="8134,18919 7258,20426 7995,22074 8008,22102 7984,22120 7372,22599 10472,26270 10413,26320 7287,22619 7261,22588 7293,22563 7912,22078 7179,20439 7171,20421 7181,20404 8067,18880 "/>
+  <polygon class="fil2" points="9879,20196 7933,18900 8451,18097 10422,18900 "/>
+  <polygon class="fil6" points="12819,18880 13705,20404 13715,20421 13707,20439 12974,22078 13593,22563 13625,22588 13599,22619 10472,26320 10413,26270 13514,22599 12902,22120 12878,22102 12890,22074 13628,20426 12752,18919 "/>
+  <polygon class="fil2" points="11043,20196 12989,18900 12471,18097 10500,18900 "/>
+ </g>
+</svg>
