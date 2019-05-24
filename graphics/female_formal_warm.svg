@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil4 {fill:#4D897C}
+    .fil0 {fill:#D6E9D8}
+    .fil6 {fill:#E31E24}
+    .fil5 {fill:#EF7F1A}
+    .fil3 {fill:#FCD5A6}
+    .fil1 {fill:#985C28}
+    .fil2 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="11162" y1="13254.6" x2="11162" y2="18588.9">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="4328" y="18575" width="13821" height="10861" rx="5318" ry="4844"/>
+  <polygon class="fil1" points="8838,18045 7959,13925 15058,14108 13531,18067 "/>
+  <polygon class="fil2" points="9284,13255 13040,13255 13040,18589 9284,18589 "/>
+  <rect class="fil3" x="7898" y="6155" width="6646" height="10071" rx="3323" ry="3215"/>
+  <polygon class="fil4" points="10614,19908 8596,18563 9133,17731 11178,18563 "/>
+  <polygon class="fil0" points="10574,19827 8556,18483 9093,17651 11137,18483 "/>
+  <polygon class="fil4" points="11741,19908 13759,18563 13222,17731 11178,18563 "/>
+  <polygon class="fil0" points="11781,19827 13800,18483 13263,17651 11218,18483 "/>
+  <path class="fil5" d="M9554 5659l342 1073c-3065,1938 -1492,7329 -687,12412 -1908,-5892 -5126,-11350 345,-13485z"/>
+  <path class="fil5" d="M9501 6609l1577 939c3509,2100 3980,6506 1341,13272 12758,-18412 -5874,-17688 -2918,-14211z"/>
+  <path class="fil6" d="M10332 14433c638,-328 1237,-255 1815,43 -312,174 -631,269 -958,255 -278,-13 -563,-105 -856,-297z"/>
+  <path class="fil0" d="M17864 26309l-13249 2c309,1125 675,2239 1298,3307l10647 21c543,-1042 988,-2146 1304,-3330z"/>
+ </g>
+</svg>

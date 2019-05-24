@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil4 {fill:#2B2A29}
+    .fil0 {fill:#4E565A}
+    .fil3 {fill:#5B5B5B}
+    .fil2 {fill:#FCD5A6}
+    .fil1 {fill:url(#id0)}
+    .fil5 {fill:url(#id1)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="10586.3" y1="13942.1" x2="10586.3" y2="19058.2">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="objectBoundingBox" x1="49.9994%" y1="0%" x2="49.9994%" y2="100%">
+   <stop offset="0" style="stop-color:#F9BE7D"/>
+   <stop offset="0.2" style="stop-color:#FAC991"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_680382480">
+   <polygon class="fil0" points="13998,10356 7204,10335 6692,7649 7384,7475 7572,6344 11783,4626 11520,5855 15144,5256 14059,7184 16177,6797 "/>
+   <polygon class="fil1" points="8540,13942 12633,13942 12633,19058 8540,19058 "/>
+   <rect class="fil2" x="7480" y="7133" width="6375" height="9659" rx="2769" ry="2679"/>
+   <path class="fil3" d="M18145 22104l0 4387 0 3148 -2594 0 -10220 0 -2594 0 0 -3148 0 -4387c0,-1731 1167,-3148 2594,-3148l10220 0c1427,0 2594,1416 2594,3148z"/>
+   <polygon class="fil4" points="10085,20323 8149,19034 8664,18236 10625,19034 "/>
+   <polygon class="fil3" points="10046,20246 8110,18956 8625,18158 10586,18956 "/>
+   <polygon class="fil4" points="11165,20323 13101,19034 12586,18236 10625,19034 "/>
+   <polygon class="fil3" points="11204,20246 13140,18956 12625,18158 10664,18956 "/>
+   <rect class="fil5" x="2736" y="25062" width="2990" height="4577"/>
+   <rect class="fil5" x="15159" y="25062" width="2990" height="4577"/>
+  </g>
+ </g>
+</svg>
