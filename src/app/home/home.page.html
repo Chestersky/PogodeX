@@ -7,7 +7,6 @@
 </ion-header>
 
 <ion-content>
-  <div>Coordinates: {{ coordinates$ | async | json }}</div>
   <div>
     <!-- Temporary -->
     Auth: {{ user$ | async | json }}
@@ -22,5 +21,11 @@
     <ion-button (click)="getWeather(2)">Pojutrze</ion-button>
     <hr />
     Weather: {{ weather$ | async | json }}
+  </div>
+  <div>
+    <ion-button *ngIf="user$ | async" (click)="setUserPref()">Add user</ion-button>
+    UserPref: {{ userPref$ | async | json }}
+    <ion-button (click)="changeGender(0)">Male</ion-button>
+    <ion-button (click)="changeGender(1)">Female</ion-button>
   </div>
 </ion-content>

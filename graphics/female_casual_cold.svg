@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#346145}
+    .fil0 {fill:#4D8A62}
+    .fil7 {fill:#E31E24}
+    .fil6 {fill:#EF7F1A}
+    .fil5 {fill:#FCD5A6}
+    .fil2 {fill:#346145}
+    .fil8 {fill:#4D8A62}
+    .fil3 {fill:#985C28}
+    .fil4 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="11286.4" y1="14878.7" x2="11286.4" y2="19990.5">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <ellipse class="fil0" cx="11302" cy="19020" rx="4563" ry="1992"/>
+  <ellipse class="fil1" cx="11311" cy="19159" rx="4033" ry="1761"/>
+  <rect class="fil2" x="4464" y="18757" width="13595" height="10683" rx="5231" ry="4764"/>
+  <polygon class="fil3" points="8900,18235 8035,14182 15018,14363 13516,18256 "/>
+  <path class="fil4" d="M9439 14530l3695 0 0 5247c-1142,474 -2357,562 -3695,0l0 -5247z"/>
+  <rect class="fil5" x="7976" y="6539" width="6538" height="9906" rx="3269" ry="3162"/>
+  <path class="fil6" d="M9604 6051l336 1056c-3015,1906 -1468,7209 -676,12209 -1876,-5795 -5042,-11164 339,-13264z"/>
+  <path class="fil6" d="M9553 6986l1551 923c3452,2066 3915,6399 1319,13054 12549,-18111 -5778,-17398 -2870,-13978z"/>
+  <path class="fil7" d="M10369 14682c627,-323 1217,-251 1785,42 -307,171 -620,265 -943,250 -274,-12 -554,-103 -842,-292z"/>
+  <path class="fil8" d="M17778 26363c799,-3440 452,-5771 -2458,-7396 169,2588 -1971,1188 -4110,2661 -1885,-1575 -3692,-76 -3898,-2699 -3053,1606 -3462,4018 -2566,7436 316,1150 666,2206 1277,3253l10473 21c555,-1066 975,-2118 1282,-3276z"/>
+ </g>
+</svg>
