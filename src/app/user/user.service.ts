@@ -17,9 +17,9 @@ export class UserPrefService {
     this.auth.user$.subscribe(user => (this.user = user));
   }
 
-  setUserPreferences(userPrefs: UserPreferences) {
+  setUserPreferences(userPrefs: any) {
     const collection = this.afs.collection<UserPreferences>('userPrefs');
-    this.userPrefs = userPrefs;
+    this.userPrefs = { ...this.userPrefs, ...userPrefs };
     collection.doc(this.user.uid).set(this.userPrefs);
   }
 

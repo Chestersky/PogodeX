@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil5 {fill:#373D40}
+    .fil3 {fill:#4E565A}
+    .fil1 {fill:#B2B09C}
+    .fil7 {fill:#CC6F3C}
+    .fil2 {fill:#FCD5A6}
+    .fil4 {fill:#373D40}
+    .fil8 {fill:#A35425}
+    .fil6 {fill:url(#id0)}
+    .fil0 {fill:url(#id1)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="10623.1" y1="16701" x2="10623.1" y2="21747.4">
+   <stop offset="0" style="stop-color:#CC6F3C"/>
+   <stop offset="0.588235" style="stop-color:#A55A31"/>
+   <stop offset="1" style="stop-color:#7D4525"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="10588.4" y1="14389" x2="10588.4" y2="19124.4">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M8541 13938l4094 0 0 5056 0 62 -11 0c-109,292 -978,520 -2035,520 -1057,0 -1927,-228 -2035,-520l-11 0 0 -62 0 -5056z"/>
+  <polygon class="fil1" points="13995,19550 5824,18984 5249,18302 5795,18214 5727,17715 6325,17788 6533,17404 7219,17658 7437,17066 7972,17320 8050,16692 9546,17314 12285,17393 13298,17050 13442,17478 14185,17287 14357,17778 15043,17786 15080,18256 15909,18233 15411,18626 16040,18698 "/>
+  <rect class="fil2" x="7481" y="7127" width="6376" height="9662" rx="2770" ry="2680"/>
+  <ellipse class="fil3" cx="10594" cy="19199" rx="4575" ry="1924"/>
+  <ellipse class="fil4" cx="10598" cy="19332" rx="3972" ry="1671"/>
+  <path class="fil3" d="M18149 22102l0 4388 0 3148 -2595 0 -10223 0 -2595 0 0 -3148 0 -4388c0,-1732 1168,-3148 2595,-3148l3215 0c-3,13 -5,27 -5,40 0,321 916,582 2047,582 1131,0 2047,-260 2047,-582 0,-14 -2,-27 -5,-40l2924 0c1427,0 2595,1417 2595,3148z"/>
+  <path class="fil5" d="M14467 18954l-7739 0c853,434 1568,931 2162,1484 658,612 1168,1293 1553,2032 871,-1228 2212,-2398 4024,-3515z"/>
+  <path class="fil6" d="M9231 20249l143 31 1069 1468 1178 -1389c343,-72 679,-180 1008,-324 174,-76 342,-164 342,-364l0 -2532c0,-200 -164,-429 -342,-364 -1362,493 -2701,544 -4011,0 -175,-73 -342,164 -342,364l0 2532c0,200 167,292 342,364 207,85 412,156 614,215z"/>
+  <path class="fil7" d="M13920 9299l-6653 0c491,-1475 -443,-3829 3314,-3977 3824,-151 3074,2501 3339,3977z"/>
+  <rect class="fil8" x="7041" y="8719" width="7143" height="947" rx="760" ry="473"/>
+ </g>
+</svg>

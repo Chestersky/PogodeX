@@ -13,12 +13,14 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { firebase } from '../config';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+    FormsModule,
     IonicModule.forRoot(),
     // Firebase -> Settings -> General -> Your apps -> Web apps -> Config
     AngularFireModule.initializeApp(firebase),

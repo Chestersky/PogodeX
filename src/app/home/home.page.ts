@@ -51,7 +51,7 @@ export class HomePage {
   }
 
   setUserPref() {
-    this.userPrefService.setUserPreferences({ gender: null });
+    this.userPrefService.setUserPreferences({ gender: Gender.Male });
   }
 
   changeGender(gender: Gender) {

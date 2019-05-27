@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content>
+  <app-outfit-preview></app-outfit-preview>
   <div>
     <!-- Temporary -->
     Auth: {{ user$ | async | json }}
@@ -25,7 +26,7 @@
   <div>
     <ion-button *ngIf="user$ | async" (click)="setUserPref()">Add user</ion-button>
     UserPref: {{ userPref$ | async | json }}
-    <ion-button (click)="changeGender(0)">Male</ion-button>
-    <ion-button (click)="changeGender(1)">Female</ion-button>
+    <ion-button (click)="changeGender('male')">Male</ion-button>
+    <ion-button (click)="changeGender('female')">Female</ion-button>
   </div>
 </ion-content>

@@ -1,0 +1,18 @@
+<select [(ngModel)]="userPrefs.gender">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>
+<select [(ngModel)]="userPrefs.preferredOutfit">
+  <option value="casual">Casual</option>
+  <option value="formal">Formal</option>
+</select>
+<select [(ngModel)]="temperature" placeholder="temperature">
+  <option value="freezing">Freezing</option>
+  <option value="cold">Cold</option>
+  <option value="warm">Warm</option>
+  <option value="hot">Hot</option>
+</select>
+<div>
+  <img class="outfit" [src]="imagePath" [alt]="imagePath" />
+  {{ imagePath }}
+</div>

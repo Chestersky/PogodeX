@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil7 {fill:#B2AD81}
+    .fil5 {fill:#E31E24}
+    .fil4 {fill:#EF7F1A}
+    .fil3 {fill:#FCD5A6}
+    .fil0 {fill:#FFFBDB}
+    .fil1 {fill:#985C28}
+    .fil6 {fill:#C32D33}
+    .fil8 {fill:#E31E24;fill-rule:nonzero}
+    .fil2 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="11173" y1="13412.8" x2="11173" y2="18695.6">
+   <stop offset="0" style="stop-color:#EF7F1A"/>
+   <stop offset="0.2" style="stop-color:#F5AA60"/>
+   <stop offset="1" style="stop-color:#FCD5A6"/>
+  </linearGradient>
+ </defs>
+ <g id="Warstwa_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" x="4405" y="18682" width="13688" height="10756" rx="5266" ry="4797"/>
+  <polygon class="fil1" points="8872,18157 8000,14077 15031,14258 13519,18178 "/>
+  <polygon class="fil2" points="9313,13413 13033,13413 13033,18696 9313,18696 "/>
+  <rect class="fil3" x="7941" y="6382" width="6582" height="9974" rx="3291" ry="3184"/>
+  <path class="fil4" d="M9581 5890l339 1063c-3035,1919 -1478,7258 -680,12292 -1889,-5835 -5076,-11240 342,-13355z"/>
+  <path class="fil5" d="M10351 14580c632,-325 1225,-253 1797,42 -309,172 -625,267 -949,252 -276,-12 -558,-104 -848,-294z"/>
+  <path class="fil6" d="M17810 26341c833,-3587 133,-5840 -2366,-7147 -348,-149 -809,-317 -1184,-413 170,2606 -867,6128 -3020,7611 -1898,-1585 -2733,-5181 -2951,-7621 -422,102 -870,256 -1354,486 -2527,1349 -3078,3912 -2246,7087 318,1158 671,2221 1286,3275l10544 21c559,-1073 981,-2133 1291,-3298z"/>
+  <polygon class="fil7" points="10675,20307 8676,18975 9208,18151 11233,18975 "/>
+  <polygon class="fil0" points="10635,20227 8636,18896 9168,18071 11193,18896 "/>
+  <polygon class="fil7" points="11790,20307 13789,18975 13257,18151 11233,18975 "/>
+  <polygon class="fil0" points="11830,20227 13829,18896 13297,18071 11272,18896 "/>
+  <path class="fil4" d="M9528 6832l1562 930c3476,2080 3942,6443 1328,13144 12635,-18235 -5817,-17517 -2890,-14073z"/>
+  <polygon class="fil8" points="8293,18858 7394,20406 8151,22099 8163,22127 8139,22146 7511,22638 11239,26392 11236,26514 7423,22658 7397,22627 7429,22601 8065,22103 7313,20419 7304,20401 7314,20383 8224,18818 "/>
+  <polygon class="fil8" points="14329,18858 15273,20406 14478,22099 14465,22127 14491,22146 15150,22638 11239,26392 11236,26514 15241,22658 15269,22627 15235,22601 14568,22103 15357,20419 15366,20401 15356,20383 14401,18818 "/>
+ </g>
+</svg>
