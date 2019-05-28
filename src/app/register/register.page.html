@@ -1,0 +1,38 @@
+<ion-header no-border id="close-bar">
+  <ion-button fill="clear" color="dark" href="/home"
+    ><ion-icon id="close-icon" name="close"></ion-icon></ion-button
+></ion-header>
+<ion-content>
+  <ion-avatar class="avatar">
+    <img
+      src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"
+    />
+  </ion-avatar>
+  <div id="input-elements">
+    <ion-item>
+      <ion-input type="email" placeholder="email"></ion-input>
+      <ion-icon slot="end" name="mail"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="password"></ion-input>
+      <ion-icon name="lock" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="password"></ion-input>
+      <ion-icon name="lock" slot="end"></ion-icon>
+    </ion-item>
+  </div>
+  <div id="nav-buttons">
+    <ion-button fill="outline" expand="block" size="large">Sign Up</ion-button>
+    <ion-item
+      ><ion-label text-wrap text-center
+        >Already have an account? <a routerLink="/login">Sign in</a></ion-label
+      ></ion-item
+    >
+  </div>
+  <div text-center>
+    <ion-button fill="clear" href="/settings" id="settings"
+      >Settings</ion-button
+    >
+  </div>
+</ion-content>
