@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({}),
     // Firebase -> Settings -> General -> Your apps -> Web apps -> Config
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule,

@@ -3,7 +3,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable, EMPTY } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from './auth.service';
 import { UserPreferences } from '../models';
 
 @Injectable({

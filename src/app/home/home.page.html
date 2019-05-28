@@ -1,32 +1,14 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <app-outfit-preview></app-outfit-preview>
-  <div>
-    <!-- Temporary -->
-    Auth: {{ user$ | async | json }}
-    <ion-button (click)="signIn()">Sign In</ion-button>
-    <ion-button (click)="signInWithFacebook()">Sign In Facebook</ion-button>
-    <ion-button (click)="signUp()">Sign Up</ion-button>
-    <ion-button (click)="signOut()">Sign Out</ion-button>
-  </div>
-  <div>
-    <ion-button (click)="getWeather(0)">Dzisiaj</ion-button>
-    <ion-button (click)="getWeather(1)">Jutro</ion-button>
-    <ion-button (click)="getWeather(2)">Pojutrze</ion-button>
-    <hr />
-    Weather: {{ weather$ | async | json }}
-  </div>
-  <div>
-    <ion-button *ngIf="user$ | async" (click)="setUserPref()">Add user</ion-button>
-    UserPref: {{ userPref$ | async | json }}
-    <ion-button (click)="changeGender('male')">Male</ion-button>
-    <ion-button (click)="changeGender('female')">Female</ion-button>
-  </div>
-</ion-content>
+<ion-tabs>
+  <!-- Tab bar -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="today">
+      <ion-title>Dzisiaj</ion-title>
+    </ion-tab-button>
+    <ion-tab-button tab="tomorrow">
+      <ion-title>Jutro</ion-title>
+    </ion-tab-button>
+    <ion-tab-button tab="day-after-tomorrow">
+      <ion-title>Pojutrze</ion-title>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

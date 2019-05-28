@@ -6,7 +6,7 @@ import { DateTime } from 'luxon';
 
 import { weatherApi } from '../../config';
 import { WeatherEntry, Coordinates, Weather } from '../models';
-import { GeolocationService } from '../geolocation/geolocation.service';
+import { GeolocationService } from './geolocation.service';
 
 const filterWeatherByDate = (date: DateTime) => (weather: WeatherEntry) => {
   const weatherDate = DateTime.fromMillis(weather.dt * 1000).startOf('day');
