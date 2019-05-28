@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Weather, UserPreferences, WeatherDate, Gender } from 'app/models';
+import { Weather, UserPreferences, WeatherDate, Gender, OutfitStyle } from 'app/models';
 import { Observable } from 'rxjs';
 import { AuthService, WeatherService, UserPrefService } from 'app/services';
 import { DateTime } from 'luxon';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-weather',
@@ -13,7 +14,7 @@ import { DateTime } from 'luxon';
 export class WeatherPage implements OnInit {
   user$: Observable<firebase.User>;
   userPref$: Observable<UserPreferences>;
-  weather$: Observable<Weather>;
+  weather: Weather;
   credentials: any = { email: 'mail@example.com', password: 'admin123#' };
 
   constructor(
@@ -24,11 +25,17 @@ export class WeatherPage implements OnInit {
   ) {
     this.user$ = this.auth.user$;
     this.user$.subscribe(() => (this.userPref$ = this.userPrefService.userPreferences$));
-    this.route.data.subscribe(data => console.log({ data }));
+    this.route.data
+      .pipe(
+        switchMap(({ date }) =>
+          this.weatherService.getWeather$(DateTime.local().plus({ day: date }))
+        )
+      )
+      .subscribe(weather => (this.weather = weather));
   }
 
   // Temporary \/
-  signIn() {
+  /* signIn() {
     this.auth.signIn(this.credentials.email, this.credentials.password);
   }
 
@@ -42,10 +49,19 @@ export class WeatherPage implements OnInit {
 
   signOut() {
     this.auth.signOut();
+  } */
+
+  get temperature(): number {
+    return Math.round(this.weather.list[0].main.temp);
   }
 
-  getWeather(dateOffset: WeatherDate) {
-    this.weather$ = this.weatherService.getWeather$(DateTime.local().plus({ day: dateOffset }));
+  get weatherState(): string {
+    return this.weather.list[0].weather[0].description;
+  }
+
+  get weatherIcon(): string {
+    const icon = this.weather.list[0].weather[0].icon;
+    return `http://openweathermap.org/img/w/${icon}.png`;
   }
 
   setUserPref() {
@@ -54,6 +70,10 @@ export class WeatherPage implements OnInit {
 
   changeGender(gender: Gender) {
     this.userPrefService.updateUserPreferences({ gender });
+  }
+
+  changeOutfitStyle(outfitStyle: OutfitStyle) {
+    this.userPrefService.updateUserPreferences({ outfitStyle });
   }
 
   ngOnInit() {}

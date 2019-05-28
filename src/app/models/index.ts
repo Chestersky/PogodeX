@@ -4,3 +4,4 @@ export * from './coordinates';
 export * from './weather';
 export * from './gender';
 export * from './user-preferences';
+export * from './outfit-style';
