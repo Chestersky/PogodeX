@@ -16,7 +16,7 @@ export class OutfitPreviewComponent implements OnInit {
 
   ngOnInit() {
     if (this.weather) {
-      const temp = this.weather.list[0].main.temp;
+      const temp = Math.round(this.weather.list[0].main.temp);
       if (temp <= -5) {
         this.outfit = 'freezing';
       } else if (temp > -5 && temp <= 10) {

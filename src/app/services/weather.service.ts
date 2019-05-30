@@ -31,10 +31,14 @@ export class WeatherService {
       weatherApi.key
     }`;
     return this.http.get<Weather>(url).pipe(
-      map((weather: any) => ({
-        city: weather.city,
-        list: weather.list.filter(filterWeatherByDate(targetDate))
-      }))
+      map((weather: any) => {
+        const weatherList: any[] = weather.list.filter(filterWeatherByDate(targetDate));
+        const isToday = targetDate.startOf('day').equals(DateTime.local().startOf('day'));
+        return {
+          city: weather.city,
+          list: isToday ? weatherList : weatherList.slice(3)
+        };
+      })
     );
   }
 }

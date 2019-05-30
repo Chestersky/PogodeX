@@ -2,8 +2,8 @@
   <div class="content">
     <ion-card-header>
       <ion-item>
-        <ion-thumbnail id="img" *ngIf="weather">
-          <ion-img [src]="weatherIcon"></ion-img>
+        <ion-thumbnail class="weather-icon" *ngIf="weather">
+          <i [ngClass]="['wi', weatherIcon]"></i>
         </ion-thumbnail>
         <ion-label id="weather_info" *ngIf="weather"
           ><ion-card-title id="degrees"
@@ -17,10 +17,6 @@
       </ion-item>
     </ion-card-header>
     <ng-container *ngIf="weather">
-      <div>
-        <ion-button (click)="changeOutfitStyle('formal')">Formal</ion-button>
-        <ion-button (click)="changeOutfitStyle('casual')">Casual</ion-button>
-      </div>
       <app-outfit-preview
         class="outfit-preview"
         [weather]="weather"
