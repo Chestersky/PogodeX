@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Weather, UserPreferences, WeatherDate, Gender, OutfitStyle } from 'app/models';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Weather, UserPreferences, Gender, OutfitStyle } from 'app/models';
 import { Observable } from 'rxjs';
 import { AuthService, WeatherService, UserPrefService } from 'app/services';
 import { DateTime } from 'luxon';
 import { switchMap } from 'rxjs/operators';
+import { ActionSheetController } from '@ionic/angular';
+import { ActionSheetButton } from '@ionic/core';
 
 @Component({
   selector: 'app-weather',
@@ -13,18 +15,24 @@ import { switchMap } from 'rxjs/operators';
 })
 export class WeatherPage implements OnInit {
   user$: Observable<firebase.User>;
+  user: firebase.User;
   userPref$: Observable<UserPreferences>;
   weather: Weather;
-  credentials: any = { email: 'mail@example.com', password: 'admin123#' };
+  credentials = { email: 'mail@example.com', password: 'admin123#' };
 
   constructor(
+    private actionSheet: ActionSheetController,
     private route: ActivatedRoute,
+    private router: Router,
     private auth: AuthService,
     private weatherService: WeatherService,
     public userPrefService: UserPrefService
   ) {
     this.user$ = this.auth.user$;
-    this.user$.subscribe(() => (this.userPref$ = this.userPrefService.userPreferences$));
+    this.user$.subscribe(user => {
+      this.user = user;
+      this.userPref$ = this.userPrefService.userPreferences$;
+    });
     this.route.data
       .pipe(
         switchMap(({ date }) =>
@@ -32,6 +40,51 @@ export class WeatherPage implements OnInit {
         )
       )
       .subscribe(weather => (this.weather = weather));
+  }
+
+  ngOnInit() {}
+
+  async openActionSheet() {
+    const buttonsWhenLogged: ActionSheetButton[] = this.user
+      ? [
+          { text: 'Wyloguj', icon: 'person', handler: () => this.auth.signOut() },
+          {
+            text: 'Ustawienia',
+            icon: 'settings',
+            handler: () => console.log('open settings')
+          }
+        ]
+      : [];
+    const buttonsWhenNotLogged: ActionSheetButton[] = !this.user
+      ? [
+          {
+            text: 'Zaloguj',
+            icon: 'person',
+            handler: () => this.auth.signIn(this.credentials.email, this.credentials.password)
+            //this.router.navigate(['/login'])
+          },
+          {
+            text: 'Zarejestruj',
+            icon: 'person-add',
+            handler: () => this.auth.signUp(this.credentials.email, this.credentials.password)
+            //this.router.navigate(['/register'])
+          }
+        ]
+      : [];
+
+    const actionSheet = await this.actionSheet.create({
+      cssClass: 'menu',
+      buttons: [
+        ...buttonsWhenLogged,
+        ...buttonsWhenNotLogged,
+        {
+          text: 'Anuluj',
+          icon: 'close',
+          role: 'cancel'
+        }
+      ]
+    });
+    await actionSheet.present();
   }
 
   // Temporary \/
@@ -95,6 +148,4 @@ export class WeatherPage implements OnInit {
   changeOutfitStyle(outfitStyle: OutfitStyle) {
     this.userPrefService.updateUserPreferences({ outfitStyle });
   }
-
-  ngOnInit() {}
 }

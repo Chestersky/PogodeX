@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 80%;
+}
+
+#nav-buttons {
+  margin-top: 32px;
+  min-width: 50%;
+}
+
+#close-bar {
+  text-align: right;
+}
+#close-icon {
+  font-size: 50px;
+}
+
+#settings {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}

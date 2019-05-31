@@ -11,7 +11,7 @@
           >
           <ion-card-subtitle id="description">{{ weatherState }}</ion-card-subtitle>
         </ion-label>
-        <ion-button fill="clear" color="dark"
+        <ion-button fill="clear" color="dark" (click)="openActionSheet()"
           ><ion-icon slot="icon-only" name="menu"></ion-icon
         ></ion-button>
       </ion-item>

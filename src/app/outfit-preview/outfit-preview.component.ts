@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { UserPreferences, Gender, Weather, OutfitStyle } from '../models';
 
 @Component({
@@ -6,9 +6,9 @@ import { UserPreferences, Gender, Weather, OutfitStyle } from '../models';
   templateUrl: './outfit-preview.component.html',
   styleUrls: ['./outfit-preview.component.scss']
 })
-export class OutfitPreviewComponent implements OnInit {
+export class OutfitPreviewComponent implements OnInit, OnChanges {
   @Input() weather: Weather;
-  @Input() userPrefs: UserPreferences = { gender: Gender.Female, outfitStyle: OutfitStyle.Formal };
+  @Input() userPrefs: UserPreferences;
   readonly temperatureThresholds = {};
   outfit: 'freezing' | 'cold' | 'warm' | 'hot' = 'cold';
 
@@ -26,6 +26,12 @@ export class OutfitPreviewComponent implements OnInit {
       } else if (temp > 25) {
         this.outfit = 'hot';
       }
+    }
+  }
+
+  ngOnChanges() {
+    if (!this.userPrefs) {
+      this.userPrefs = { gender: Gender.Female, outfitStyle: OutfitStyle.Formal };
     }
   }
 
