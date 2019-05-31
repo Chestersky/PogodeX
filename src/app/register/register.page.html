@@ -7,29 +7,31 @@
     <ion-avatar class="avatar">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
     </ion-avatar>
-    <div class="content">
+
+    <form class="content" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
       <div id="input-elements">
         <ion-item>
-          <ion-input type="email" placeholder="email"></ion-input>
+          <ion-input type="email" placeholder="email" formControlName="email"></ion-input>
           <ion-icon slot="end" name="mail"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="password"></ion-input>
+          <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
           <ion-icon name="lock" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="password"></ion-input>
+          <ion-input type="password" placeholder="confirm password" formControlName="passwordConfirmation"></ion-input>
           <ion-icon name="lock" slot="end"></ion-icon>
         </ion-item>
       </div>
       <div id="nav-buttons">
-        <ion-button fill="outline" expand="block" size="large">Sign Up</ion-button>
+        <ion-button type="submit" fill="outline" expand="block" size="large" [disabled]="!profileForm.valid">Sign Up</ion-button>
         <ion-item
           ><ion-label text-wrap text-center
             >Already have an account? <a routerLink="/login">Sign in</a></ion-label
           ></ion-item
         >
       </div>
-    </div>
+    </form>
+
   </div>
 </ion-content>
