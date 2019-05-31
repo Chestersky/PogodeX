@@ -38,6 +38,6 @@ export class OutfitPreviewComponent implements OnInit, OnChanges {
   get imagePath() {
     return `assets/img/outfits/${this.userPrefs.gender}_${this.userPrefs.outfitStyle}_${
       this.outfit
-    }.svg`;
+    }.png`;
   }
 }
