@@ -7,25 +7,26 @@
     <ion-avatar class="avatar">
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y" />
     </ion-avatar>
-    <div class="content">
-      <div id="input-elements">
-        <ion-item>
-          <ion-input type="email" placeholder="email"></ion-input>
-          <ion-icon slot="end" name="mail"></ion-icon>
-        </ion-item>
-        <ion-item>
-          <ion-input type="password" placeholder="password"></ion-input>
-          <ion-icon name="lock" slot="end"></ion-icon>
-        </ion-item>
-      </div>
-      <div id="nav-buttons">
-        <ion-button fill="outline" expand="block" size="large">Sign In</ion-button>
-        <ion-item
-          ><ion-label text-wrap text-center
-            ><a href="/register">Create account</a></ion-label
-          ></ion-item
-        >
-      </div>
-    </div>
+
+      <form class="content" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div id="input-elements">
+          <ion-item>
+            <ion-input type="email" placeholder="email" formControlName="email"></ion-input>
+            <ion-icon slot="end" name="mail"></ion-icon>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
+            <ion-icon name="lock" slot="end"></ion-icon>
+          </ion-item>
+        </div>
+        <div id="nav-buttons">
+          <ion-button type="submit" fill="outline" expand="block" size="large" [disabled]="!profileForm.valid">Sign In</ion-button>
+          <ion-item
+            ><ion-label text-wrap text-center
+              ><a href="/register">Create account</a></ion-label
+            ></ion-item>
+        </div>
+      </form>
+
   </div>
 </ion-content>
