@@ -1,0 +1,248 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.2s;
+    z-index: 2;
+}
+
+nav a{
+    color:white;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li{
+    float: left;
+    padding: 15px 20px;
+}
+
+.fake-link{
+    cursor: pointer;
+}
+
+.fake-link a{
+    text-decoration: none;
+    color: white;
+}
+
+.fake-link::after{
+    content: '';
+    display: block;
+    background-color: white;
+    height: 1px;
+    width: 0px;
+    transition: width 0.2s; 
+}
+
+.fake-link:hover::after{
+    width: 100%;
+}
+
+#start {
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#about{
+    min-height: 100vh;
+    display: flex;
+}
+
+#about .photo{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(253, 214, 163);
+}
+
+#about .description{
+    width: 55%;
+    padding: 50px;
+}
+
+#about .description h1{
+    font-size: 40px;
+    color: rgb(201, 123, 22);
+}
+
+.gallery-header{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.gallery-header span{
+    font-size: 40px;
+    color: rgb(83, 93, 94);
+    padding: 15px 30px;
+    background-color: white;
+    max-width: 80%;
+}
+
+#resources .description {
+    min-height: 60vh;
+    padding: 50px;
+    display: flex;
+	justify-content: center;
+    flex-direction: column;
+}
+
+#resources .description p {
+    display: block;
+    width: 50%;
+	margin: auto;
+}
+
+#github {
+	background-color: blue;
+}
+
+#prototype {
+	background-color: blue;
+}
+
+#trello {
+	background-color: blue;
+}
+
+#app {
+	background-color: blue;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+}
+
+.container .link{
+    width: 15vw;
+	display: block;
+	margin: 50px;
+	overflow: hidden;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+.container .link:hover {
+	-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}
+
+.container .link div{
+    height: 20vh;
+	transition: all 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 25px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container .link div:hover{
+	transform: scale(1.1);
+}
+
+footer{
+	width: 100%;
+    min-height: 10vh;
+    background-color: #013543;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.copyright {
+	color: white;
+	font-size: 12px;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 1300px){
+    .container .link{
+        width: 25vw;
+    }
+
+    #resources .description p {
+        display: block;
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    body {
+        font-size: 13px;
+    }
+
+    .logo{
+        max-width: 80%
+    }
+
+    #about{
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #about .photo{
+        width: 100%;
+        height: 450px;
+        background-position: 50% 40%;
+    }
+
+    #about .description{
+        padding: 50px;
+        width: calc(100vw - 100px);
+    }
+
+    #modal-content{
+        max-width: 80%;
+    }
+
+    #resources .description p {
+        width: 100%;
+    }
+
+    .container .link{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .container .link div{
+        font-size: 18px;
+    }
+
+    #contact span{
+        font-size: 15px;
+    }
+}
