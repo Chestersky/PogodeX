@@ -2,19 +2,24 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase/app';
 import { Observable, of } from 'rxjs';
+import { ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private firebaseAuth: AngularFireAuth) {}
+  constructor(private firebaseAuth: AngularFireAuth, private toastController: ToastController) {}
 
   signUp(email: string, password: string) {
-    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password);
+    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
+      this.displayToast('Pomyślnie utworzono konto');
+    });
   }
 
   signIn(email: string, password: string) {
-    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password);
+    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(() => {
+      this.displayToast('Zalogowano pomyślnie');
+    });
   }
 
   signInAnonymously() {
@@ -26,7 +31,18 @@ export class AuthService {
   }
 
   signOut() {
-    this.firebaseAuth.auth.signOut();
+    this.firebaseAuth.auth.signOut().then(() => {
+      this.displayToast('Wylogowano');
+    });
+  }
+
+  async displayToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000,
+      showCloseButton: true
+    });
+    toast.present();
   }
 
   get user$(): Observable<firebase.User> {
