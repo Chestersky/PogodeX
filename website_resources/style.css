@@ -87,6 +87,20 @@ nav ul li{
     color: rgb(201, 123, 22);
 }
 
+#about .description button{
+    color: white;
+    background-color: rgb(201, 123, 22);
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .gallery-header{
     height: 40vh;
     display: flex;
@@ -118,19 +132,19 @@ nav ul li{
 }
 
 #github {
-	background-color: blue;
+    background-image: url("./images/rain.jpg");
 }
 
 #prototype {
-	background-color: blue;
+	background-image: url("./images/night.jpg");
 }
 
 #trello {
-	background-color: blue;
+	background-image: url("./images/sunny.jpg");
 }
 
 #app {
-	background-color: blue;
+    background-image: url("./images/winter.jpg");
 }
 
 .container{
@@ -186,6 +200,57 @@ footer{
 	font-size: 12px;
     margin-bottom: 7px;
     margin-top: 7px;
+}
+
+/* MODAL */
+#modal {
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    overflow: auto;
+}
+
+.modal-wrapper {
+    height: 100%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#modal-image{
+    max-width: 85%;
+    max-height: 85vh;
+    display: inline-block;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    overflow: auto;
+    align-self: center;
+}
+
+@keyframes fade-in{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#modal .close{
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.2s;
+    font-size: 35px;
+}
+
+#modal .close:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
 }
 
 @media screen and (max-width: 1300px){
