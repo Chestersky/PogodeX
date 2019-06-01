@@ -10,8 +10,6 @@ import { AuthService } from 'app/services';
 })
 export class RegisterPage implements OnInit {
 
-  password : string;
-
   constructor(private authService: AuthService) { }
 
   profileForm = new FormGroup({
@@ -24,8 +22,7 @@ export class RegisterPage implements OnInit {
     ]),
     passwordConfirmation: new FormControl('', [
       Validators.required,
-      Validators.minLength(5),
-      Validators.pattern(this.password)
+      Validators.minLength(5)
     ])
   });
 
