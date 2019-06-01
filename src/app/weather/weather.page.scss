@@ -4,19 +4,39 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   background: none;
+}
+
+.alerts {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.alerts > * {
+  font-size: 2em;
+  margin: 4px 16px;
 }
 
 .weather-state {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  align-self: center;
 }
-
 .weather-state > * {
-  margin: 4px;
+  margin: 8px 16px;
 }
-
+.weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+#degrees {
+  font-size: 3em;
+}
 #description {
   color: #444;
 }
@@ -26,13 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.weather-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2em;
+  overflow: hidden;
 }
 
 .bg-rain {
