@@ -64,10 +64,6 @@ nav ul li{
     color: white;
 }
 
-.logo {
-    max-width: 50vw;
-}
-
 #about{
     min-height: 100vh;
     display: flex;

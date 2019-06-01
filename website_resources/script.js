@@ -22,17 +22,6 @@
         document.getElementsByTagName('body')[0].style.overflow = 'auto';
     }
 
-//close the modal when click outside the image
-    var modal = document.getElementById('modal');
-    var modalWrapper = document.getElementsByClassName('modal-wrapper')[0];
-    window.onclick = function(event) {
-        if (event.target == modal || event.target == modalWrapper) {
-            modal.style.display = "none";
-            document.getElementById('modal-image').src = "";
-            document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        }
-    }
-
 //scroll to section
     $(document).ready(function(){
         $('a[href^="#"]').on('click', function(event) {
