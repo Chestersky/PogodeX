@@ -51,7 +51,7 @@ export class WeatherPage implements OnInit {
           {
             text: 'Ustawienia',
             icon: 'settings',
-            handler: () => console.log('open settings')
+            handler: () => this.router.navigate(['../../settings'])
           }
         ]
       : [];
