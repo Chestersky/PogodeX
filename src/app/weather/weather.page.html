@@ -10,22 +10,34 @@
         <i *ngIf="alerts.strongWind" class="wi wi-strong-wind"></i>
         <i *ngIf="alerts.rain" class="wi wi-umbrella"></i>
       </div>
-      <div class="weather-state">
-        <ion-thumbnail class="weather-icon" *ngIf="weather">
-          <i class="wi" [ngClass]="weatherIcon"></i>
-        </ion-thumbnail>
-        <ion-label id="weather_info" *ngIf="weather"
-          ><ion-card-title id="degrees"
-            ><strong>{{ temperature }}°</strong></ion-card-title
-          >
-          <ion-card-subtitle id="description">{{ weatherState }}</ion-card-subtitle>
-        </ion-label>
+      <div id="weather">
+        <div class="weather-state">
+          <ion-thumbnail class="weather-icon" *ngIf="weather">
+            <i class="wi" [ngClass]="weatherIcon"></i>
+          </ion-thumbnail>
+          <ion-label id="weather_info" *ngIf="weather"
+            ><ion-card-title id="degrees"
+              ><strong>{{ temperature }}°</strong></ion-card-title
+            >
+            <ion-card-subtitle id="description">{{
+              weatherState
+            }}</ion-card-subtitle>
+          </ion-label>
+          <div id="detailed-weather">
+            <strong>
+              Ciśnienie: {{ detailedWeather.pressure }} hPa<br />
+              Prędkość wiatru: {{ detailedWeather.windSpeed }} m/s<br />
+              Wilgotność powietrza: {{ detailedWeather.humidity }}% <br />
+              Zachmurzenie: {{ detailedWeather.clouds }}%
+            </strong>
+          </div>
+        </div>
+        <app-outfit-preview
+          class="outfit-preview"
+          [weather]="weather"
+          [userPrefs]="userPref$ | async"
+        ></app-outfit-preview>
       </div>
-      <app-outfit-preview
-        class="outfit-preview"
-        [weather]="weather"
-        [userPrefs]="userPref$ | async"
-      ></app-outfit-preview>
     </ng-container>
   </div>
 </ion-content>

@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Weather, UserPreferences, Gender, OutfitStyle } from 'app/models';
-import { Observable } from 'rxjs';
-import { AuthService, WeatherService, UserPrefService } from 'app/services';
-import { DateTime } from 'luxon';
-import { switchMap } from 'rxjs/operators';
-import { ActionSheetController } from '@ionic/angular';
-import { ActionSheetButton } from '@ionic/core';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { Weather, UserPreferences, Gender, OutfitStyle } from "app/models";
+import { Observable } from "rxjs";
+import { AuthService, WeatherService, UserPrefService } from "app/services";
+import { DateTime } from "luxon";
+import { switchMap } from "rxjs/operators";
+import { ActionSheetController } from "@ionic/angular";
+import { ActionSheetButton } from "@ionic/core";
 
 @Component({
-  selector: 'app-weather',
-  templateUrl: './weather.page.html',
-  styleUrls: ['./weather.page.scss']
+  selector: "app-weather",
+  templateUrl: "./weather.page.html",
+  styleUrls: ["./weather.page.scss"]
 })
 export class WeatherPage implements OnInit {
   user$: Observable<firebase.User>;
   user: firebase.User;
   userPref$: Observable<UserPreferences>;
   weather: Weather;
-  credentials = { email: 'mail@example.com', password: 'admin123#' };
+  credentials = { email: "mail@example.com", password: "admin123#" };
   alerts = { strongWind: false, rain: false };
 
   background: string;
@@ -45,21 +45,21 @@ export class WeatherPage implements OnInit {
       .subscribe(weather => {
         this.weather = weather;
 
-        this.alerts.rain = weather.list[0].weather[0].main === 'Rain';
+        this.alerts.rain = weather.list[0].weather[0].main === "Rain";
         this.alerts.strongWind = weather.list[0].wind.speed > 15;
 
         const backgrounds = {
-          Clear: 'clear-sky',
-          Rain: 'rain',
-          Clouds: 'clouds',
-          Snow: 'snow'
+          Clear: "clear-sky",
+          Rain: "rain",
+          Clouds: "clouds",
+          Snow: "snow"
         };
         const main = weather.list[0].weather[0].main;
         if (Object.keys(backgrounds).includes(main)) {
           this.background = backgrounds[main];
         }
-        if (weather.list[0].weather[0].icon.endsWith('n')) {
-          this.background = 'night';
+        if (weather.list[0].weather[0].icon.endsWith("n")) {
+          this.background = "night";
         }
       });
   }
@@ -69,40 +69,52 @@ export class WeatherPage implements OnInit {
   async openActionSheet() {
     const buttonsWhenLogged: ActionSheetButton[] = this.user
       ? [
-          { text: 'Wyloguj', icon: 'person', handler: () => this.auth.signOut() },
           {
-            text: 'Ustawienia',
-            icon: 'settings',
-            handler: () => this.router.navigate(['../../settings'])
+            text: "Wyloguj",
+            icon: "person",
+            handler: () => this.auth.signOut()
+          },
+          {
+            text: "Ustawienia",
+            icon: "settings",
+            handler: () => this.router.navigate(["../../settings"])
           }
         ]
       : [];
     const buttonsWhenNotLogged: ActionSheetButton[] = !this.user
       ? [
           {
-            text: 'Zaloguj',
-            icon: 'person',
-            handler: () => this.auth.signIn(this.credentials.email, this.credentials.password)
+            text: "Zaloguj",
+            icon: "person",
+            handler: () =>
+              this.auth.signIn(
+                this.credentials.email,
+                this.credentials.password
+              )
             //this.router.navigate(['/login'])
           },
           {
-            text: 'Zarejestruj',
-            icon: 'person-add',
-            handler: () => this.auth.signUp(this.credentials.email, this.credentials.password)
+            text: "Zarejestruj",
+            icon: "person-add",
+            handler: () =>
+              this.auth.signUp(
+                this.credentials.email,
+                this.credentials.password
+              )
             //this.router.navigate(['/register'])
           }
         ]
       : [];
 
     const actionSheet = await this.actionSheet.create({
-      cssClass: 'menu',
+      cssClass: "menu",
       buttons: [
         ...buttonsWhenLogged,
         ...buttonsWhenNotLogged,
         {
-          text: 'Anuluj',
-          icon: 'close',
-          role: 'cancel'
+          text: "Anuluj",
+          icon: "close",
+          role: "cancel"
         }
       ]
     });
@@ -117,26 +129,35 @@ export class WeatherPage implements OnInit {
     return this.weather.list[0].weather[0].description;
   }
 
+  get detailedWeather(): object {
+    return {
+      pressure: Math.round(this.weather.list[0].main.pressure),
+      windSpeed: this.weather.list[0].wind.speed,
+      humidity: this.weather.list[0].main.humidity,
+      clouds: this.weather.list[0].clouds.all
+    };
+  }
+
   get weatherIcon(): string {
     const icons = {
-      '01d': 'wi-day-sunny',
-      '02d': 'wi-day-cloudy',
-      '03d': 'wi-cloud',
-      '04d': 'wi-cloudy',
-      '09d': 'wi-day-showers',
-      '10d': 'wi-day-rain',
-      '11d': 'wi-day-thunderstorm',
-      '13d': 'wi-day-snow',
-      '50d': 'wi-day-fog',
-      '01n': 'wi-night-clear',
-      '02n': 'wi-night-cloudy',
-      '03n': 'wi-cloud',
-      '04n': 'wi-cloudy',
-      '09n': 'wi-night-showers',
-      '10n': 'wi-night-rain',
-      '11n': 'wi-night-thunderstorm',
-      '13n': 'wi-night-snow',
-      '50n': 'wi-night-fog'
+      "01d": "wi-day-sunny",
+      "02d": "wi-day-cloudy",
+      "03d": "wi-cloud",
+      "04d": "wi-cloudy",
+      "09d": "wi-day-showers",
+      "10d": "wi-day-rain",
+      "11d": "wi-day-thunderstorm",
+      "13d": "wi-day-snow",
+      "50d": "wi-day-fog",
+      "01n": "wi-night-clear",
+      "02n": "wi-night-cloudy",
+      "03n": "wi-cloud",
+      "04n": "wi-cloudy",
+      "09n": "wi-night-showers",
+      "10n": "wi-night-rain",
+      "11n": "wi-night-thunderstorm",
+      "13n": "wi-night-snow",
+      "50n": "wi-night-fog"
     };
     const iconId = this.weather.list[0].weather[0].icon;
     return icons[iconId];

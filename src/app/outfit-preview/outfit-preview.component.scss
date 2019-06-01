@@ -3,3 +3,8 @@
   height: 300px;
   width: auto;
 }
+@media (min-width: 600px) {
+  .outfit {
+    height: 500px;
+  }
+}
