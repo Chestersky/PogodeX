@@ -34,7 +34,10 @@ export class AuthService {
   }
 
   signInWithFacebook() {
-    this.firebaseAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
+    this.firebaseAuth.auth
+      .signInWithPopup(new auth.FacebookAuthProvider())
+      .then(() => this.router.navigate(['/']))
+      .then(() => this.displayToast('Zalogowano pomyślnie'));
   }
 
   signOut() {

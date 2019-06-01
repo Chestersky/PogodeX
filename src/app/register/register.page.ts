@@ -22,4 +22,8 @@ export class RegisterPage implements OnInit {
   onSubmit() {
     this.authService.signUp(this.profileForm.value.email, this.profileForm.value.password);
   }
+
+  signInWithFacebook() {
+    this.authService.signInWithFacebook();
+  }
 }

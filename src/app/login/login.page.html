@@ -1,6 +1,6 @@
 <ion-header no-border id="close-bar">
-  <ion-button fill="clear" color="dark" [routerLink]="['/']"
-    ><ion-icon id="close-icon" name="close"></ion-icon></ion-button
+  <ion-button fill="clear" color="dark"
+    ><ion-back-button class="close-icon" icon="close"></ion-back-button></ion-button
 ></ion-header>
 <ion-content>
   <div class="container">
@@ -29,7 +29,7 @@
             [disabled]="!profileForm.valid"
             >Zaloguj</ion-button
           >
-          <ion-button fill="solid" size="large"
+          <ion-button fill="solid" size="large" (click)="signInWithFacebook()"
             ><ion-icon name="logo-facebook"></ion-icon
           ></ion-button>
         </div>

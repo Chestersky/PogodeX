@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserPrefService } from 'app/services';
-import { UserPreferences } from 'app/models';
+import { UserPreferences, Gender, OutfitStyle } from 'app/models';
 
 @Component({
   selector: 'app-settings',
@@ -10,8 +10,8 @@ import { UserPreferences } from 'app/models';
 })
 export class SettingsPage implements OnInit {
   preferences = new FormGroup({
-    gender: new FormControl(''),
-    outfitStyle: new FormControl('')
+    gender: new FormControl(Gender.Female),
+    outfitStyle: new FormControl(OutfitStyle.Formal)
   });
 
   constructor(private userPrefs: UserPrefService) {
