@@ -1,9 +1,9 @@
 <ion-content>
-  <div class="content sunny">
+  <div class="content" [ngClass]="'bg-' + background">
     <ion-card-header class="header">
       <div class="weather-state">
         <ion-thumbnail class="weather-icon" *ngIf="weather">
-          <i [ngClass]="['wi', weatherIcon]"></i>
+          <i class="wi" [ngClass]="weatherIcon"></i>
         </ion-thumbnail>
         <ion-label id="weather_info" *ngIf="weather"
           ><ion-card-title id="degrees"
