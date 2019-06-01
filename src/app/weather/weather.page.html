@@ -1,6 +1,15 @@
 <ion-content>
   <div class="content" [ngClass]="'bg-' + background">
     <ion-card-header class="header">
+      <ion-button fill="clear" color="dark" (click)="openActionSheet()"
+        ><ion-icon slot="icon-only" name="menu"></ion-icon
+      ></ion-button>
+    </ion-card-header>
+    <ng-container *ngIf="weather">
+      <div *ngIf="alerts.rain || alerts.strongWind" class="alerts">
+        <i *ngIf="alerts.strongWind" class="wi wi-strong-wind"></i>
+        <i *ngIf="alerts.rain" class="wi wi-umbrella"></i>
+      </div>
       <div class="weather-state">
         <ion-thumbnail class="weather-icon" *ngIf="weather">
           <i class="wi" [ngClass]="weatherIcon"></i>
@@ -12,11 +21,6 @@
           <ion-card-subtitle id="description">{{ weatherState }}</ion-card-subtitle>
         </ion-label>
       </div>
-      <ion-button fill="clear" color="dark" (click)="openActionSheet()"
-        ><ion-icon slot="icon-only" name="menu"></ion-icon
-      ></ion-button>
-    </ion-card-header>
-    <ng-container *ngIf="weather">
       <app-outfit-preview
         class="outfit-preview"
         [weather]="weather"

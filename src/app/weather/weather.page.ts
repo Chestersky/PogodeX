@@ -19,6 +19,7 @@ export class WeatherPage implements OnInit {
   userPref$: Observable<UserPreferences>;
   weather: Weather;
   credentials = { email: 'mail@example.com', password: 'admin123#' };
+  alerts = { strongWind: false, rain: false };
 
   background: string;
 
@@ -44,18 +45,19 @@ export class WeatherPage implements OnInit {
       .subscribe(weather => {
         this.weather = weather;
 
+        this.alerts.rain = weather.list[0].weather[0].main === 'Rain';
+        this.alerts.strongWind = weather.list[0].wind.speed > 15;
+
         const backgrounds = {
           Clear: 'clear-sky',
           Rain: 'rain',
           Clouds: 'clouds',
           Snow: 'snow'
         };
-
         const main = weather.list[0].weather[0].main;
         if (Object.keys(backgrounds).includes(main)) {
           this.background = backgrounds[main];
         }
-
         if (weather.list[0].weather[0].icon.endsWith('n')) {
           this.background = 'night';
         }
