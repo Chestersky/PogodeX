@@ -86,22 +86,12 @@ export class WeatherPage implements OnInit {
           {
             text: "Zaloguj",
             icon: "person",
-            handler: () =>
-              this.auth.signIn(
-                this.credentials.email,
-                this.credentials.password
-              )
-            //this.router.navigate(['/login'])
+            handler: () => this.router.navigate(["/login"])
           },
           {
             text: "Zarejestruj",
             icon: "person-add",
-            handler: () =>
-              this.auth.signUp(
-                this.credentials.email,
-                this.credentials.password
-              )
-            //this.router.navigate(['/register'])
+            handler: () => this.router.navigate(["/register"])
           }
         ]
       : [];

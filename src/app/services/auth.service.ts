@@ -3,23 +3,30 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase/app';
 import { Observable, of } from 'rxjs';
 import { ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private firebaseAuth: AngularFireAuth, private toastController: ToastController) {}
+  constructor(
+    private firebaseAuth: AngularFireAuth,
+    private router: Router,
+    private toastController: ToastController
+  ) {}
 
   signUp(email: string, password: string) {
-    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
-      this.displayToast('Pomyślnie utworzono konto');
-    });
+    this.firebaseAuth.auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(() => this.router.navigate(['/']))
+      .then(() => this.displayToast('Pomyślnie utworzono konto'));
   }
 
   signIn(email: string, password: string) {
-    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password).then(() => {
-      this.displayToast('Zalogowano pomyślnie');
-    });
+    this.firebaseAuth.auth
+      .signInWithEmailAndPassword(email, password)
+      .then(() => this.router.navigate(['/']))
+      .then(() => this.displayToast('Zalogowano pomyślnie'));
   }
 
   signInAnonymously() {
@@ -27,7 +34,10 @@ export class AuthService {
   }
 
   signInWithFacebook() {
-    this.firebaseAuth.auth.signInWithPopup(new auth.FacebookAuthProvider());
+    this.firebaseAuth.auth
+      .signInWithPopup(new auth.FacebookAuthProvider())
+      .then(() => this.router.navigate(['/']))
+      .then(() => this.displayToast('Zalogowano pomyślnie'));
   }
 
   signOut() {
