@@ -7,24 +7,34 @@
     <img
       src="https://raw.githubusercontent.com/Chestersky/PogodeX/master/graphics/pogodeX_logo.png"
     />
-    <div class="content">
+
+    <form class="content" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
       <div id="input-elements">
         <ion-item>
-          <ion-input type="email" placeholder="email"></ion-input>
+          <ion-input type="email" placeholder="E-mail" formControlName="email"></ion-input>
           <ion-icon slot="end" name="mail"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="hasło"></ion-input>
+          <ion-input type="password" placeholder="Hasło" formControlName="password"></ion-input>
           <ion-icon name="lock" slot="end"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-input type="password" placeholder="hasło"></ion-input>
+          <ion-input
+            type="password"
+            placeholder="Powtórz hasło"
+            formControlName="passwordConfirmation"
+          ></ion-input>
           <ion-icon name="lock" slot="end"></ion-icon>
         </ion-item>
       </div>
       <div id="nav-buttons">
         <div id="buttons">
-          <ion-button fill="outline" expand="block" size="large"
+          <ion-button
+            type="submit"
+            fill="outline"
+            expand="block"
+            size="large"
+            [disabled]="!profileForm.valid"
             >Zarejestruj</ion-button
           >
           <ion-button fill="solid" size="large"
@@ -37,6 +47,6 @@
           ></ion-item
         >
       </div>
-    </div>
+    </form>
   </div>
 </ion-content>
