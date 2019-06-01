@@ -5,6 +5,7 @@ import { tap } from 'rxjs/operators';
 
 import { AuthService } from './auth.service';
 import { UserPreferences } from '../models';
+import { ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,11 @@ export class UserPrefService {
   private user: firebase.User;
   private userPrefs: UserPreferences;
 
-  constructor(private afs: AngularFirestore, private auth: AuthService) {
+  constructor(
+    private afs: AngularFirestore,
+    private auth: AuthService,
+    private toastController: ToastController
+  ) {
     this.auth.user$.subscribe(user => (this.user = user));
   }
 
@@ -36,6 +41,16 @@ export class UserPrefService {
   updateUserPreferences(newUserPrefs: UserPreferences | any) {
     this.afs
       .doc<UserPreferences>(`userPrefs/${this.user.uid}`)
-      .set({ ...this.userPrefs, ...newUserPrefs });
+      .set({ ...this.userPrefs, ...newUserPrefs })
+      .then(() => this.displayToast('Zaktualizowano preferencje!'));
+  }
+
+  async displayToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000,
+      showCloseButton: true
+    });
+    toast.present();
   }
 }
