@@ -20,6 +20,8 @@ export class WeatherPage implements OnInit {
   weather: Weather;
   credentials = { email: 'mail@example.com', password: 'admin123#' };
 
+  background: string;
+
   constructor(
     private actionSheet: ActionSheetController,
     private route: ActivatedRoute,
@@ -39,7 +41,25 @@ export class WeatherPage implements OnInit {
           this.weatherService.getWeather$(DateTime.local().plus({ day: date }))
         )
       )
-      .subscribe(weather => (this.weather = weather));
+      .subscribe(weather => {
+        this.weather = weather;
+
+        const backgrounds = {
+          Clear: 'clear-sky',
+          Rain: 'rain',
+          Clouds: 'clouds',
+          Snow: 'snow'
+        };
+
+        const main = weather.list[0].weather[0].main;
+        if (Object.keys(backgrounds).includes(main)) {
+          this.background = backgrounds[main];
+        }
+
+        if (weather.list[0].weather[0].icon.endsWith('n')) {
+          this.background = 'night';
+        }
+      });
   }
 
   ngOnInit() {}
@@ -51,7 +71,7 @@ export class WeatherPage implements OnInit {
           {
             text: 'Ustawienia',
             icon: 'settings',
-            handler: () => console.log('open settings')
+            handler: () => this.router.navigate(['../../settings'])
           }
         ]
       : [];
@@ -86,23 +106,6 @@ export class WeatherPage implements OnInit {
     });
     await actionSheet.present();
   }
-
-  // Temporary \/
-  /* signIn() {
-    this.auth.signIn(this.credentials.email, this.credentials.password);
-  }
-
-  signUp() {
-    this.auth.signUp(this.credentials.email, this.credentials.password);
-  }
-
-  signInWithFacebook() {
-    this.auth.signInWithFacebook();
-  }
-
-  signOut() {
-    this.auth.signOut();
-  } */
 
   get temperature(): number {
     return Math.round(this.weather.list[0].main.temp);

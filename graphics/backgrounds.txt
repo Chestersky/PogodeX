@@ -1,0 +1,39 @@
+rain/cloudy
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#527299+0,ffffff+100 */
+background: #527299; /* Old browsers */
+background: -moz-linear-gradient(top, #527299 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #527299 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #527299 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#527299', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+snow/cloudy - winter
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#699bc6+0,ffffff+100 */
+background: #699bc6; /* Old browsers */
+background: -moz-linear-gradient(top, #699bc6 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #699bc6 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #699bc6 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#699bc6', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+clear sky
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#edef58+0,ffffff+100 */
+background: #edef58; /* Old browsers */
+background: -moz-linear-gradient(top, #edef58 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #edef58 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #edef58 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edef58', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+clear sky - winter
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#59abd1+0,ffffff+100 */
+background: #59abd1; /* Old browsers */
+background: -moz-linear-gradient(top, #59abd1 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #59abd1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #59abd1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59abd1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+night
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#09003d+0,ffffff+100 */
+background: #09003d; /* Old browsers */
+background: -moz-linear-gradient(top, #09003d 0%, #ffffff 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #09003d 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #09003d 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09003d', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
